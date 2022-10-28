@@ -1,5 +1,19 @@
-function increment() {
-	let count = 0;
+let saveEl = document.getElementById('save-el');
+let countEl = document.getElementById('count-el');
+let count = 0;
 
-	return (count += 1);
+function increment() {
+	count += 1;
+	countEl.textContent = count;
+}
+
+function resetCount() {
+	count = 0;
+	countEl.textContent = count;
+	saveEl.textContent = count;
+}
+
+function save() {
+	let saveEntry = ' ' + count + ' - ';
+	saveEl.textContent += saveEntry;
 }
