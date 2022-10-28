@@ -9,11 +9,12 @@ function increment() {
 
 function resetCount() {
 	count = 0;
-	countEl.textContent = count;
 	saveEl.textContent = count;
 }
 
 function save() {
 	let saveEntry = ' ' + count + ' - ';
 	saveEl.textContent += saveEntry;
+	count = 0;
+	countEl.textContent = count;
 }
