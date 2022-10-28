@@ -8,13 +8,16 @@ function increment() {
 }
 
 function resetCount() {
-	count = 0;
+	count = null;
+	CountClicks = 0;
 	saveEl.textContent = count;
 }
 
 function save() {
 	let saveEntry = ' ' + count + ' - ';
-	saveEl.textContent += saveEntry;
-	count = 0;
-	countEl.textContent = count;
+	if (count > 0) {
+		saveEl.textContent += saveEntry;
+		count = 0;
+		countEl.textContent = count;
+	}
 }
